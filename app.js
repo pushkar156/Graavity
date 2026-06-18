@@ -59,4 +59,70 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
+
+    // 3. Header Scroll Transitions (Shrink height & add solid bg on scroll)
+    const header = document.querySelector('header');
+    const nav = document.querySelector('header nav');
+    
+    if (header && nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md', 'bg-white/95');
+                header.classList.remove('bg-surface/80');
+                nav.classList.remove('h-20');
+                nav.classList.add('h-16');
+            } else {
+                header.classList.remove('shadow-md', 'bg-white/95');
+                header.classList.add('bg-surface/80');
+                nav.classList.remove('h-16');
+                nav.classList.add('h-20');
+            }
+        });
+    }
+
+    // 4. ScrollSpy: Highlight active navigation links on scroll and update sliding indicator
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navIndicator = document.getElementById('nav-indicator');
+    
+    // We target each corresponding section: Hero (About), Specialities, Facilities, Doctors, Contact
+    const targetSections = [
+        document.querySelector('main > section:nth-of-type(1)'), // Hero (About)
+        document.getElementById('specialities'),
+        document.getElementById('facilities'),
+        document.getElementById('doctors'),
+        document.getElementById('contact')
+    ];
+
+    function activeMenu() {
+        let currentSectionIdx = 0;
+        const scrollPosition = window.scrollY + 120; // offset for nav bar height
+
+        targetSections.forEach((section, index) => {
+            if (section && scrollPosition >= section.offsetTop) {
+                currentSectionIdx = index;
+            }
+        });
+
+        let activeLink = null;
+        navLinks.forEach((link, index) => {
+            if (index === currentSectionIdx) {
+                link.className = "nav-link text-secondary font-bold pb-1 transition-all duration-300 font-label-md text-label-md";
+                activeLink = link;
+            } else {
+                link.className = "nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-all duration-300 font-label-md text-label-md pb-1";
+            }
+        });
+
+        if (navIndicator && activeLink) {
+            navIndicator.style.left = `${activeLink.offsetLeft}px`;
+            navIndicator.style.width = `${activeLink.offsetWidth}px`;
+            navIndicator.style.opacity = '1';
+        }
+    }
+
+    window.addEventListener('scroll', activeMenu);
+    window.addEventListener('resize', activeMenu);
+    
+    // Wait slightly for fonts and styles to resolve initial widths perfectly
+    setTimeout(activeMenu, 150);
 });

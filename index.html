@@ -108,18 +108,19 @@
 </head>
 <body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-surface-variant dark:border-outline-variant shadow-sm dark:shadow-none">
-<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto">
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-surface-variant dark:border-outline-variant shadow-sm dark:shadow-none transition-all duration-300">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto transition-all duration-300">
 <div class="flex items-center gap-xs">
 <span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
 <span class="font-headline-md text-headline-md font-bold text-secondary dark:text-primary-fixed-dim">Graavity Hospital</span>
 </div>
-<div class="hidden md:flex items-center gap-lg">
-<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">About</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#specialities">Specialities</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#facilities">Facilities</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#doctors">Doctors</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#contact">Contact</a>
+<div class="relative hidden md:flex items-center gap-lg h-full">
+<a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md pb-1" href="#">About</a>
+<a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md pb-1" href="#specialities">Specialities</a>
+<a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md pb-1" href="#facilities">Facilities</a>
+<a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md pb-1" href="#doctors">Doctors</a>
+<a class="nav-link text-on-surface-variant dark:text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md pb-1" href="#contact">Contact</a>
+<div id="nav-indicator" class="absolute bottom-5 h-[3px] bg-secondary transition-all duration-300 rounded-full" style="left: 0; width: 0; opacity: 0;"></div>
 </div>
 <div class="flex items-center gap-4">
 <a href="tel:02532620444" class="hidden sm:flex bg-primary hover:bg-on-primary-fixed-variant text-white px-md py-sm rounded-full font-label-md text-label-md transition-all active:scale-95 items-center gap-2">
@@ -214,14 +215,14 @@
 <section class="py-xl bg-surface-container-low">
 <div class="px-margin-desktop max-w-7xl mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
-<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-secondary transition-all duration-300 group">
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-error transition-all duration-300 group">
 <div class="w-12 h-12 rounded-2xl bg-error-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-error">emergency_share</span>
 </div>
 <h4 class="font-headline-md text-headline-md mb-2">Emergency Services</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Dedicated trauma unit available round the clock for immediate care.</p>
 </div>
-<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-secondary transition-all duration-300 group">
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-primary transition-all duration-300 group">
 <div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-on-primary-container">ecg_heart</span>
 </div>
@@ -235,9 +236,9 @@
 <h4 class="font-headline-md text-headline-md mb-2">Experienced Doctors</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Board-certified specialists with decades of medical expertise.</p>
 </div>
-<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-secondary transition-all duration-300 group">
-<div class="w-12 h-12 rounded-2xl bg-tertiary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-on-tertiary-container">biotech</span>
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container">biotech</span>
 </div>
 <h4 class="font-headline-md text-headline-md mb-2">Advanced Facilities</h4>
 <p class="font-body-md text-body-md text-on-surface-variant">Equipped with state-of-the-art diagnostic and surgical tools.</p>
@@ -259,7 +260,7 @@
 </div>
 <div class="space-y-md lg:pl-lg">
 <span class="text-secondary font-bold tracking-widest text-label-md">OUR LEGACY</span>
-<h2 class="font-headline-xl text-headline-xl">Patient-First Healthcare at <span class="text-secondary">Graavity Hospital</span></h2>
+<h2 class="font-headline-xl text-headline-xl">Patient-First Healthcare at <span class="text-primary">Graavity Hospital</span></h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
                         Graavity Multi-Speciality Hospital is Nashik's leading destination for comprehensive medical care. We are committed to providing reassuring precision in every treatment, combining high-tech diagnostics with human-centric care.
                     </p>
