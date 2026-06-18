@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Graavity Multi-Speciality Hospital | Critical Care &amp; Trauma Centre Nashik</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<script src="app.js" defer></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "error-container": "#ffdad6",
+                "on-surface": "#151c22",
+                "error": "#ba1a1a",
+                "on-primary-fixed": "#001c37",
+                "surface-tint": "#0061a5",
+                "on-secondary-fixed-variant": "#005236",
+                "inverse-on-surface": "#eaf1f9",
+                "secondary": "#006c49",
+                "on-primary": "#ffffff",
+                "tertiary": "#575f67",
+                "primary": "#0061a5",
+                "surface-container": "#e8eff7",
+                "primary-container": "#4da6ff",
+                "on-primary-container": "#003a67",
+                "primary-fixed-dim": "#a0caff",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#313941",
+                "on-background": "#151c22",
+                "on-tertiary": "#ffffff",
+                "outline-variant": "#c0c7d4",
+                "inverse-surface": "#2a3137",
+                "surface-variant": "#dce3eb",
+                "on-tertiary-fixed-variant": "#3f484f",
+                "surface-container-highest": "#dce3eb",
+                "inverse-primary": "#a0caff",
+                "on-secondary-fixed": "#002113",
+                "outline": "#707783",
+                "on-primary-fixed-variant": "#00497e",
+                "background": "#f6faff",
+                "tertiary-fixed-dim": "#bfc8d0",
+                "on-surface-variant": "#404752",
+                "secondary-fixed": "#89f8c3",
+                "surface": "#f6faff",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#89f8c3",
+                "surface-container-low": "#edf4fc",
+                "on-error": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "surface-dim": "#d4dbe3",
+                "surface-container-high": "#e2e9f1",
+                "surface-bright": "#f6faff",
+                "secondary-fixed-dim": "#6cdba8",
+                "tertiary-container": "#9aa3ac",
+                "on-secondary-container": "#00734e",
+                "primary-fixed": "#d2e4ff",
+                "tertiary-fixed": "#dbe4ed",
+                "on-tertiary-fixed": "#141d23"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "lg": "48px",
+                "md": "24px",
+                "gutter": "24px",
+                "base": "8px",
+                "margin-mobile": "16px",
+                "margin-desktop": "64px",
+                "sm": "12px",
+                "xs": "4px",
+                "xl": "80px"
+            },
+            "fontFamily": {
+                "headline-xl": ["Manrope"],
+                "body-lg": ["Plus Jakarta Sans"],
+                "headline-lg-mobile": ["Manrope"],
+                "headline-md": ["Manrope"],
+                "caption": ["Plus Jakarta Sans"],
+                "body-md": ["Plus Jakarta Sans"],
+                "label-md": ["Plus Jakarta Sans"],
+                "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-xl border-b border-surface-variant dark:border-outline-variant shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center h-20 px-margin-desktop max-w-7xl mx-auto">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Graavity Hospital</span>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#specialities">Specialities</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#facilities">Facilities</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#doctors">Doctors</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors font-label-md text-label-md" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="tel:02532620444" class="hidden sm:flex bg-primary hover:bg-on-primary-fixed-variant text-white px-md py-sm rounded-full font-label-md text-label-md transition-all active:scale-95 items-center gap-2">
+<span class="material-symbols-outlined text-sm">call</span>
+                Emergency Call
+            </a>
+<button id="mobile-menu-btn" class="md:hidden text-primary p-2 focus:outline-none flex items-center justify-center" aria-label="Open Menu">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Drawer -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[100] hidden backdrop-blur-sm transition-opacity duration-300"></div>
+<div id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white z-[101] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-lg">
+<div class="flex justify-between items-center mb-xl border-b border-surface-variant pb-md">
+<span class="font-headline-md text-headline-md font-bold text-primary">Menu</span>
+<button id="mobile-menu-close-btn" class="text-on-surface-variant p-2" aria-label="Close Menu">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-md">
+<a class="mobile-menu-link text-primary font-bold text-lg" href="#">About</a>
+<a class="mobile-menu-link text-on-surface-variant hover:text-primary text-lg transition-colors" href="#specialities">Specialities</a>
+<a class="mobile-menu-link text-on-surface-variant hover:text-primary text-lg transition-colors" href="#facilities">Facilities</a>
+<a class="mobile-menu-link text-on-surface-variant hover:text-primary text-lg transition-colors" href="#doctors">Doctors</a>
+<a class="mobile-menu-link text-on-surface-variant hover:text-primary text-lg transition-colors" href="#contact">Contact</a>
+</div>
+<div class="mt-auto pt-lg border-t border-surface-variant">
+<a href="tel:02532620444" class="w-full bg-error text-white py-md rounded-xl text-center font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">call</span> Emergency Call
+</a>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, wide-angle photograph of a modern, brightly lit hospital corridor with high-end glass architecture and sterile white surfaces. A team of professional medical staff in clean scrubs are walking purposefully, conveying expertise and care. The lighting is soft and airy, emphasizing a calming healthcare environment with soft blue and green light accents. The composition is clean and minimalist, showcasing a high-tech medical facility in Nashik." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzj0AC-5PNsV3N9pRCUaB9Z8akj9t5LlCSmzbiupYizdlQqwnUHAsNyqFyw4txKzSjBTypodxBRC5lWA4TkVJjGXnEtHLgWPbwf6aVhke0OJsfp65-E0KSO7rHM3Oz8rZG6jn5-QOnh2ssbUMvPABGeWRpzlNNISxqdhYVP5kBYS4noNYcwnPukUlxZG9SQlxjB9dIug_fuBKz2Isx-VoDwYE_gBANfB-sVle1jGKXAGG5G_LvMIdkJc7Pa4-czbK9oC3x2gO1EjM"/>
+</div>
+<div class="relative z-20 px-margin-desktop max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div class="flex flex-col justify-center gap-md">
+<div class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-md py-2 rounded-full w-fit">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-label-md text-label-md tracking-wider">NASHIK'S PREMIER CARE</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface max-w-xl">
+                        24×7 Critical Care &amp; <span class="text-primary">Trauma Services</span> in Nashik
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Experience world-class multi-speciality healthcare with a patient-first approach. We provide rapid response and precision medicine when every second counts.
+                    </p>
+<div class="flex flex-wrap gap-md mt-sm">
+<button class="bg-primary text-white px-lg py-md rounded-full font-label-md text-label-md hover:shadow-lg transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined">call</span> Call Now
+                        </button>
+<button class="bg-surface-container-high border border-outline-variant text-on-surface px-lg py-md rounded-full font-label-md text-label-md hover:bg-surface-variant transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined">directions</span> Get Directions
+                        </button>
+</div>
+</div>
+<div class="hidden lg:flex items-center justify-center">
+<div class="glass-card medical-shadow p-lg rounded-[32px] w-full max-w-sm flex flex-col gap-md border-t-4 border-t-error">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-error flex items-center gap-2">
+<span class="material-symbols-outlined">medical_services</span> Emergency
+                            </h3>
+<span class="bg-error-container text-on-error-container px-sm py-1 rounded-full text-caption font-bold animate-pulse">LIVE 24/7</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Instant medical assistance for trauma, cardiac, and critical emergencies.</p>
+<div class="space-y-sm">
+<div class="flex items-center gap-md p-sm bg-white rounded-xl">
+<div class="bg-secondary-container p-2 rounded-lg"><span class="material-symbols-outlined text-on-secondary-container">health_and_safety</span></div>
+<span class="font-label-md text-label-md">Emergency Care Certified</span>
+</div>
+<div class="flex items-center gap-md p-sm bg-white rounded-xl">
+<div class="bg-primary-container p-2 rounded-lg"><span class="material-symbols-outlined text-on-primary-container">ambulance</span></div>
+<span class="font-label-md text-label-md">Trauma Centre Excellence</span>
+</div>
+<div class="flex items-center gap-md p-sm bg-white rounded-xl">
+<div class="bg-tertiary-container p-2 rounded-lg"><span class="material-symbols-outlined text-on-tertiary-container">partner_heart</span></div>
+<span class="font-label-md text-label-md">Multi-Speciality Trust</span>
+</div>
+</div>
+<a class="bg-on-surface text-surface py-md rounded-xl text-center font-bold hover:opacity-90 transition-opacity" href="tel:02532620444">0253 262 0444</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Info Grid -->
+<section class="py-xl bg-surface-container-low">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-2xl bg-error-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-error">emergency_share</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Emergency Services</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Dedicated trauma unit available round the clock for immediate care.</p>
+</div>
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-2xl bg-primary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary-container">ecg_heart</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Critical Care</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Advanced ICU monitoring with 1:1 nursing ratio for severe conditions.</p>
+</div>
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-container">groups</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Experienced Doctors</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Board-certified specialists with decades of medical expertise.</p>
+</div>
+<div class="bg-white p-lg rounded-3xl border border-outline-variant hover:border-primary transition-all duration-300 group">
+<div class="w-12 h-12 rounded-2xl bg-tertiary-container flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-container">biotech</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Advanced Facilities</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Equipped with state-of-the-art diagnostic and surgical tools.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-white overflow-hidden">
+<div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="relative">
+<div class="aspect-square rounded-[40px] overflow-hidden medical-shadow">
+<img class="w-full h-full object-cover" data-alt="A warm and inviting photograph of a smiling senior doctor in a white coat interacting gently with a patient. The background shows a modern, clean hospital reception area with soft lighting. The image captures a moment of compassion and 'Patient-First' healthcare, with a clean and high-end aesthetic featuring a palette of whites, soft blues, and greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvcDDjI1LeYbdL6RHMzNGR3NpS55N0fXuc5Kew_WoAPv6t0GHJyvHZhq4nnIBUllesf7_WAL77heYM1d0xztrQEl0RXwJlSYi44cynE4W9YV54_aL-fkD6nYHvxSLn02a1LP7Ah5Qz4CsddotYuhjfM75wr4lN0CSUgEnGTDQwydYdAg4bwy9Vz6OfH1M3XWWuo7XKxBTeweL8ptlWhKYgripVLIPMOj7zX53PtSuc-4LxCdai1puXClXMW5BVZ04UfaFvoN4Ioas"/>
+</div>
+<div class="absolute -bottom-10 -right-10 bg-primary p-lg rounded-3xl text-white medical-shadow hidden md:block">
+<span class="text-headline-xl font-bold block">10+</span>
+<span class="text-label-md">Years of Service</span>
+</div>
+</div>
+<div class="space-y-md lg:pl-lg">
+<span class="text-primary font-bold tracking-widest text-label-md">OUR LEGACY</span>
+<h2 class="font-headline-xl text-headline-xl">Patient-First Healthcare at <span class="text-primary">Graavity Hospital</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Graavity Multi-Speciality Hospital is Nashik's leading destination for comprehensive medical care. We are committed to providing reassuring precision in every treatment, combining high-tech diagnostics with human-centric care.
+                    </p>
+<div class="grid grid-cols-2 gap-md py-md">
+<div class="p-md bg-background rounded-2xl border-l-4 border-secondary">
+<span class="text-headline-md font-bold text-secondary block">50k+</span>
+<span class="text-body-md text-on-surface-variant">Patients Served</span>
+</div>
+<div class="p-md bg-background rounded-2xl border-l-4 border-primary">
+<span class="text-headline-md font-bold text-primary block">24/7</span>
+<span class="text-body-md text-on-surface-variant">Availability</span>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant border-l-2 border-outline-variant pl-md">
+                        "Our mission is to bridge the gap between advanced medical science and compassionate patient care, ensuring everyone has access to life-saving treatment."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Specialities -->
+<section class="py-xl bg-surface-container-low" id="specialities">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-xl text-headline-xl mb-md">Our Medical Specialities</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">World-class expertise across multiple disciplines to care for you and your family.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-md">
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">clinical_notes</span>
+<h5 class="font-headline-md text-headline-md">Critical Care</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">medical_mask</span>
+<h5 class="font-headline-md text-headline-md">Trauma Care</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">stethoscope</span>
+<h5 class="font-headline-md text-headline-md">General Medicine</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">precision_manufacturing</span>
+<h5 class="font-headline-md text-headline-md">Surgery</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">orthopedics</span>
+<h5 class="font-headline-md text-headline-md">Orthopedics</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">cardiology</span>
+<h5 class="font-headline-md text-headline-md">Cardiology</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-md">child_care</span>
+<h5 class="font-headline-md text-headline-md">Pediatrics</h5>
+</div>
+<div class="bg-white p-lg rounded-[32px] text-center hover:-translate-y-2 transition-transform duration-300 medical-shadow">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">female</span>
+<h5 class="font-headline-md text-headline-md">Gynecology</h5>
+</div>
+</div>
+</div>
+</section>
+<!-- Facilities -->
+<section class="py-xl bg-white" id="facilities">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl gap-md">
+<div>
+<h2 class="font-headline-xl text-headline-xl">Modern Infrastructure</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Built for precision and comfort.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-2 group" href="#">
+                        View All Facilities <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="group relative rounded-[32px] overflow-hidden aspect-[4/3] medical-shadow">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A clean and modern high-tech Intensive Care Unit (ICU) interior. Features advanced medical monitors, a comfortable adjustable patient bed, and sterile white and blue surroundings. The lighting is soft and professional, highlighting a reassuring and advanced medical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYINQBeSc8Q8b2dhi2j5ouNnmwmMM2Jm9oru407mtvr5mc_CqtYwy8au14lzu1jRhLcEj2mP8SukLm0pXD4J7CFdygffqp06lTy8-fYVRommwjsoA6Zsx4682ef5KBhG6Y3hvNTPxmIXd68yCfwG_zZhQHnruQ9v3VslyIGXGow9p5vBR0REGYFlsTiym628z3ssvav0sFfN20-ys4k0Aslkzw9jLVy0i-Q-BRYGk9zVltfSOzEH4-VFeDItnacH2G1lfTFTg3V5A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent flex flex-col justify-end p-lg">
+<h4 class="text-white font-headline-md text-headline-md">Advanced ICU</h4>
+<p class="text-surface-variant font-body-md">Equipped with central monitoring and life support.</p>
+</div>
+</div>
+<div class="group relative rounded-[32px] overflow-hidden aspect-[4/3] medical-shadow">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Interior of a modern emergency ward with high-tech diagnostic equipment and mobile medical carts. The setting is clean and well-lit, designed for fast-paced medical interventions. Soft white lighting with professional blue highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoVLr4FgEbznXkYsXP8LO4uLcI15BvFXVqi63c56NLG7AdIMNCrkxz761P0GOF5SV-rdm-rY3wHqy2S-Y1axwg5sozEYgPYXRTeT2pLYnk-q685OvjVyM_wmWHI1f8BWft-CqD1LUgJ6xmv0Rm-7HQ4OZcKw50cwjDkiZB33WmiNt8BPOAiKBd3l0Cqx0TgHT-l3k9KRjVSvqrXR9PxRSYPzN6O91UuZgLwX2Gk8icpXiAyAKpHfo9yQbz3_CmfQz7JAOxv2_J_DY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent flex flex-col justify-end p-lg">
+<h4 class="text-white font-headline-md text-headline-md">Emergency Ward</h4>
+<p class="text-surface-variant font-body-md">24/7 rapid response trauma unit.</p>
+</div>
+</div>
+<div class="group relative rounded-[32px] overflow-hidden aspect-[4/3] medical-shadow">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A modern ambulance parked in front of a contemporary hospital entrance. The vehicle is equipped with high-tech life support markings. The scene is bright and professional, emphasizing reliability and readiness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjJNVRCNXob22spw7Kgm8ubMHaySIWBpTaJBAy4pT7sL8d3sg4c1y9PtREMcigazovqbULvQ1aTQ-wqeHJu_k7vE4hM4Qfe2ZYPT7vBXg0ErwEo1kOZCIdzNcw-2w4rr12hncToWacwdUG-07LJvo6BnYoCA_JfnaPG4t9a3uT0l5tYZhEof3qN2uuqHto9kyCOjJ_lczcBqfbU41iXPLJRlHZOTrL8NnOB4qjnLOkdxh_3jGbUPDvHZjaWI4PoVguHUappSdbiXs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent flex flex-col justify-end p-lg">
+<h4 class="text-white font-headline-md text-headline-md">Ambulance Support</h4>
+<p class="text-surface-variant font-body-md">Cardiac and trauma-ready ambulance fleet.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctors Section -->
+<section class="py-xl bg-surface-container-low" id="doctors">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-xl text-headline-xl">Meet Our Specialists</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Excellence driven by expertise.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Doctor 1 -->
+<div class="bg-white rounded-[32px] p-md medical-shadow border border-white hover:border-primary/20 transition-all">
+<div class="aspect-square rounded-2xl overflow-hidden mb-md">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a senior male doctor with grey hair, wearing a white medical coat and a blue tie. He has a warm, confident smile and is standing in a brightly lit, modern hospital setting. The lighting is clean and soft, emphasizing professionalism and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEP65tx-sRQgr0p3Fy2AruDhHWtbW-kpe_NQHreoHGdlradXYLQA1D6FT5lQ3iCBdIDfQvkTciMQxixzN2AcqrsbeBWOfEYeR17h0fL8u4b7KQIOJprMYAqJ0V2JF_Yt4kxcYjRqOMclNbFG0nihC97EyCiDdDLz9hxcp9r5f5-Aq5lc0VLXqauqJqfAtCFFmcew7f6jGi8tRlLliUgQmq2HH3KtRwwdndamYAW0P4ocTuAGhnOqZTCE1XJL35Cj94lrxS0wzn3YA"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Dr. Rajesh Patil</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">MD, DM (Critical Care)</p>
+<p class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-caption inline-block font-bold">Chief Critical Care</p>
+</div>
+<!-- Doctor 2 -->
+<div class="bg-white rounded-[32px] p-md medical-shadow border border-white hover:border-primary/20 transition-all">
+<div class="aspect-square rounded-2xl overflow-hidden mb-md">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a female doctor with glasses and a stethoscope around her neck. She is wearing a white coat over a soft teal top. Her expression is kind and expert. The background is a blurred high-end clinic office with soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1c0CbvCw9ppmkrv96vj9AdmmTpqIuQFW2bAPp4EgfOAIj_vkoPWikU8orieWRX4nWaPRXLRPEUhLOk47rEPSIdi-MnU3-eT3MdRkKGs-SvfZJJnQAUa6wpaUs9ON-5LbHtoqLK16k6FwWRgjdg4lyKYO-IKCVjFkiplw0wpQ6e4G3SkpQoQ6gks3011cxq6Kcd9h2KZZgUmpnRMBdJtEfoacaeRoccjonABgaa7uudtQsrD1tdgF48lY_93ZkPbI1bWwzd6RFWO8"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Dr. Sunita Deshmukh</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">MS, MCh (Orthopedics)</p>
+<p class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-caption inline-block font-bold">Senior Surgeon</p>
+</div>
+<!-- Doctor 3 -->
+<div class="bg-white rounded-[32px] p-md medical-shadow border border-white hover:border-primary/20 transition-all">
+<div class="aspect-square rounded-2xl overflow-hidden mb-md">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a male cardiologist in a white coat, holding a tablet. He looks approachable and technologically savvy. The lighting is bright and modern, suggesting a high-tech medical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtEktA5zglVJnMwWbXp3LVsPZUZEJWGKcaULlR46jdZR6znzpluqlRljblxCLf-TFNlbI3evfJKAcjLBG8G6a9rRkWI5VQ2qxDvWTUyqS25147zvpf5WhFyEqM6jT1GLB6inZ5PNuEfoaqVxoxJc1Jc4bpYI2OoAfoWUG-8UH5iU_YC4-4bHF45iDL5Qc6rIzX76thm5R_gNE6pj7X_FpaszgTNjDPTTYGsBrasXG_IwwoB66thkw2Qhrv-T68XKqN4xNvm2cWA1g"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Dr. Amit Shinde</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">MD (Cardiology)</p>
+<p class="bg-primary-container/20 text-on-primary-container px-3 py-1 rounded-full text-caption inline-block font-bold">Cardiology Head</p>
+</div>
+<!-- Doctor 4 -->
+<div class="bg-white rounded-[32px] p-md medical-shadow border border-white hover:border-primary/20 transition-all">
+<div class="aspect-square rounded-2xl overflow-hidden mb-md">
+<img class="w-full h-full object-cover" data-alt="A professional portrait of a female pediatrician with a colorful stethoscope, smiling warmly. She is in a clean, modern medical office designed for patient comfort. The aesthetic is bright, airy, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuOz0iiNKWfdh5ZzgqwZiVR9I6R4Ko_YzZKOimPdAEu7KEuriVIH-V8X2QPw0IV-oomYI_C7cGIK53rFnsqwD1ITqNX0sf4r6QjNTOj2nxgSqG63ECcymTnBv2czzOCdCE0g60QnGDa6gJtK8F7ydaXTH4_5Lze1T8wx9CWt-8-lx-0MPpPiJkDwWmsBMwuUG8X_7J2DNXedAehxp0pQUU8boM8bE5DHbd3Yn2JjFXAOwvCpodJHGEglekHPQeuW2pfDSyLOZIAE0"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary">Dr. Priyanka Shah</h4>
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">DNB (Pediatrics)</p>
+<p class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-caption inline-block font-bold">Pediatrics Expert</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-xl bg-white">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-md">Why Patients Trust <span class="text-primary">Graavity</span></h2>
+<div class="space-y-md">
+<div class="flex gap-md">
+<div class="shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">24x7 Availability</h4>
+<p class="font-body-md text-on-surface-variant">Round-the-clock medical attention for any emergency.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<div class="shrink-0 w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">person_pin</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Patient-Centered Care</h4>
+<p class="font-body-md text-on-surface-variant">Tailored treatment plans focused on individual recovery.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<div class="shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">medication</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md">Experienced Medical Team</h4>
+<p class="font-body-md text-on-surface-variant">Collaborative team of top-tier specialists and nurses.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-surface-container-low p-lg rounded-[32px] text-center border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-5xl mb-md">apartment</span>
+<h4 class="font-headline-md text-headline-md">Modern Infrastructure</h4>
+</div>
+<div class="bg-secondary-container/30 p-lg rounded-[32px] text-center border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-5xl mb-md">thumb_up</span>
+<h4 class="font-headline-md text-headline-md">98% Satisfaction</h4>
+</div>
+<div class="col-span-2 bg-primary-container p-lg rounded-[32px] text-center text-on-primary-container">
+<span class="material-symbols-outlined text-5xl mb-md">volunteer_activism</span>
+<h4 class="font-headline-md text-headline-md">Compassionate &amp; Affordable Healthcare</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-xl bg-surface-container-low overflow-hidden">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-center mb-xl">Patient Success Stories</h2>
+<div class="overflow-hidden w-full relative py-4">
+<div class="animate-scroll gap-6">
+<!-- Original Cards -->
+<div class="min-w-[300px] md:min-w-[400px] bg-white p-lg rounded-[32px] medical-shadow flex-shrink-0">
+<div class="flex gap-1 text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-md italic">"The critical care team at Graavity saved my father during a cardiac emergency. Their response time was incredible."</p>
+<p class="font-label-md text-label-md font-bold">Anil Kulkarni</p>
+<p class="text-caption text-on-surface-variant">Patient Son</p>
+</div>
+<div class="min-w-[300px] md:min-w-[400px] bg-white p-lg rounded-[32px] medical-shadow flex-shrink-0">
+<div class="flex gap-1 text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-md italic">"Best ortho care in Nashik. The surgery was smooth, and the recovery support was excellent."</p>
+<p class="font-label-md text-label-md font-bold">Meera Gupta</p>
+<p class="text-caption text-on-surface-variant">Post-Op Patient</p>
+</div>
+<!-- Duplicate Cards for Infinite Loop -->
+<div class="min-w-[300px] md:min-w-[400px] bg-white p-lg rounded-[32px] medical-shadow flex-shrink-0" aria-hidden="true">
+<div class="flex gap-1 text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-md italic">"The critical care team at Graavity saved my father during a cardiac emergency. Their response time was incredible."</p>
+<p class="font-label-md text-label-md font-bold">Anil Kulkarni</p>
+<p class="text-caption text-on-surface-variant">Patient Son</p>
+</div>
+<div class="min-w-[300px] md:min-w-[400px] bg-white p-lg rounded-[32px] medical-shadow flex-shrink-0" aria-hidden="true">
+<div class="flex gap-1 text-primary mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg mb-md italic">"Best ortho care in Nashik. The surgery was smooth, and the recovery support was excellent."</p>
+<p class="font-label-md text-label-md font-bold">Meera Gupta</p>
+<p class="text-caption text-on-surface-variant">Post-Op Patient</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-white" id="contact">
+<div class="px-margin-desktop max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div class="space-y-lg">
+<h2 class="font-headline-xl text-headline-xl">Visit Our Center</h2>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<h4 class="font-headline-md text-headline-md">Nashik Main Centre</h4>
+<p class="font-body-md text-on-surface-variant">Bus Depot, 4th Floor, Shri Harikrishna Plaza, Opp. Old Bus Stand, Adgaon Naka, Panchavati, Nashik, Maharashtra 422003.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">call</span>
+<div>
+<h4 class="font-headline-md text-headline-md">Phone Support</h4>
+<p class="font-body-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="tel:02532620444">0253 262 0444</a>
+</p>
+</div>
+</div>
+<div class="flex gap-md mt-lg">
+<a class="bg-[#25D366] text-white px-lg py-md rounded-full font-bold flex items-center gap-2 hover:opacity-90 transition-opacity active:scale-95" href="https://wa.me/912532620444" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined">chat</span> WhatsApp
+</a>
+<a class="bg-primary text-white px-lg py-md rounded-full font-bold flex items-center gap-2 hover:bg-on-primary-fixed-variant transition-colors active:scale-95" href="tel:02532620444">
+<span class="material-symbols-outlined">call</span> Call Now
+</a>
+</div>
+</div>
+<div class="rounded-[40px] overflow-hidden medical-shadow h-[400px] bg-surface-container border border-outline-variant">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.2435760237734!2d73.81163697582458!3d20.04018282121703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddc17df3029f63%3A0xc3c5a6eb883b27b3!2sAdgaon%20Naka%2C%20Panchavati%2C%20Nashik%2C%20Maharashtra%20422003!5e0!3m2!1sen!2sin!4v1718720000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-high dark:bg-surface-container-highest border-t border-outline-variant w-full py-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-7xl mx-auto">
+<div class="space-y-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">local_hospital</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Graavity Hospital</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Nashik's leading Critical Care &amp; Trauma Centre, dedicated to reassuring precision and patient-first healthcare since 2014.</p>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary mb-md">Quick Links</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Specialities</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Doctors</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Facilities</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Emergency Care</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary mb-md">Legal</h5>
+<ul class="space-y-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Patient Rights</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors hover:translate-x-1 inline-block" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary mb-md">Emergency 24/7</h5>
+<p class="font-headline-md font-bold text-error mb-2">0253 262 0444</p>
+<p class="text-on-surface-variant font-body-md mb-md">Adgaon Naka, Panchavati, Nashik.</p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center medical-shadow text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center medical-shadow text-primary hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop mt-xl pt-lg border-t border-outline-variant text-center">
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 Graavity Multi-Speciality Hospital. Reassuring Precision in Healthcare.</p>
+</div>
+</footer>
+</body></html>
