@@ -25,16 +25,16 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-50% - 12px)); /* Adjust for gap and container duplicate width */
+        transform: translateX(-100%);
     }
 }
 
 .animate-scroll {
     display: flex;
-    width: max-content;
+    flex-shrink: 0;
     animation: scroll 40s linear infinite;
 }
 
-.animate-scroll:hover {
+.scroll-container:hover .animate-scroll {
     animation-play-state: paused;
 }

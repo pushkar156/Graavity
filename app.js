@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Scroll Reveal Animations using IntersectionObserver
+    // Exclude the hero section (first-of-type) so above-the-fold content loads instantly
     const observerOptions = {
         threshold: 0.1
     };
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('section').forEach(section => {
+    document.querySelectorAll('section:not(:first-of-type)').forEach(section => {
         section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
         observer.observe(section);
     });
